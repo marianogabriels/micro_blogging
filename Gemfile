@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'sequel'
 gem 'haml'
 gem 'rspec'
+gem 'bcrypt'
 
 
 group :development, :test do

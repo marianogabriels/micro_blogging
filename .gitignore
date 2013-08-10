@@ -1,0 +1,6 @@
+sinatraapp_development.db
+sinatraapp_test.db
+.bundle/
+.sass-cache/
+.DS_Store
+tmp/**/*

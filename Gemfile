@@ -4,6 +4,7 @@ gem 'rake'
 gem 'sinatra'
 gem 'sequel'
 gem 'haml'
+gem 'rspec'
 
 
 group :development, :test do

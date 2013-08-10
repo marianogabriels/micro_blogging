@@ -3,9 +3,10 @@ require "sinatra"
 require "sequel"
 
 
-class SinatraApp
+class SinatraApp < Sinatra::Application
   enable :sessions
-
-  configure :development do
-  end
 end
+
+
+
+require_relative 'models/init'

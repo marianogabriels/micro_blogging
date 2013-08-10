@@ -6,6 +6,7 @@ require "sequel"
 
 class MicroBloggin < Sinatra::Application
   enable :sessions
+  set :root, File.dirname(__FILE__)
 end
 
 

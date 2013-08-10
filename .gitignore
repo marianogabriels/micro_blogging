@@ -1,5 +1,5 @@
-sinatraapp_development.db
-sinatraapp_test.db
+development.db
+test.db
 .bundle/
 .sass-cache/
 .DS_Store

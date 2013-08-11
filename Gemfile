@@ -7,6 +7,11 @@ gem 'sequel'
 gem 'haml'
 gem 'rake'
 
+group :development do
+  gem 'guard'
+  gem 'guard-rspec'
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'
@@ -19,8 +24,4 @@ end
 
 group :production do
   gem 'pg'
-end
-
-group :test do
-  gem 'rspec'
 end

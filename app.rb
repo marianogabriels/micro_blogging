@@ -1,6 +1,7 @@
 require 'haml'
-require "sinatra"
-require "sequel"
+require 'sinatra'
+require 'sequel'
+require 'bcrypt'
 
 
 

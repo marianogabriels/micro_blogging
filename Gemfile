@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt-ruby'
 gem 'rake'
 gem 'sinatra'
 gem 'sequel'
 gem 'haml'
 gem 'rspec'
-gem 'bcrypt'
-
 
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'
   gem 'pry'
+  gem 'shotgun'
 end
 
 

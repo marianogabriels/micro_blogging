@@ -1,11 +1,11 @@
-class MyApp < Sinatra::Application
+class MicroBloggin < Sinatra::Application
+  get '/' do
+    'juejue'
+  end
 
   get "/tweets" do
-    #all tweets pending
   end
 
   post "/tweet" do
-
   end
-
 end

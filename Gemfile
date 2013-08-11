@@ -5,6 +5,7 @@ gem 'rack'
 gem 'sinatra'
 gem 'sequel'
 gem 'haml'
+gem 'rake'
 
 group :development, :test do
   gem 'sqlite3'

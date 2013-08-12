@@ -1,4 +1,4 @@
-class MicroBloggin < Sinatra::Application
+class MicroBloggin < Sinatra::Base
   configure :development do
     #set :database, 'sqlite://tmp/development.sqlite'
   end

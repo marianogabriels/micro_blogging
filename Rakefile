@@ -22,14 +22,15 @@ namespace :db do
 
   namespace :migrate do
     task :dev do
-      DB = Sequel.connect('sqlite://development.db', target: 0)
+      DB = Sequel.connect('sqlite://development.db')
       Sequel::Migrator.run(DB, "db/migrate")
       puts "generada development.db"
     end
     task :test do
-      DB = Sequel.connect('sqlite://test.db', target: 0 )
+      DB = Sequel.connect('sqlite://test.db' )
       Sequel::Migrator.run(DB, "db/migrate")
       puts "generada test.db"
     end
   end
+
 end

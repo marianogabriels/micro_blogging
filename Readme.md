@@ -1,9 +1,9 @@
-MicroBloggin < Sinatra::Application
+MicroBloggin
 ----------------------------------
 
 install
 =======
 
     bundle install
-    rake db:migrate
+    rake db:migrate:dev
     shotgun

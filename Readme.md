@@ -1,4 +1,4 @@
-MicroBloggin < Sinatra::Application
+MicroBlogging < Sinatra::Application
 ----------------------------------
 
 install

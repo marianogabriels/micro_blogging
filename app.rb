@@ -3,6 +3,7 @@ require 'sinatra'
 require 'sequel'
 require 'bcrypt'
 require 'shotgun'
+require_relative 'db/config'
 
 require_relative 'config/appconf.rb'
 class MicroBloggin < Sinatra::Application ; end

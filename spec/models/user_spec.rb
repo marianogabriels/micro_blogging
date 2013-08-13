@@ -5,7 +5,7 @@ describe User do
     #@valid_sample_user = User(username: 'valid', email: 'valid@example.com')
     #@valid_sample_user.save
   end
-  it { User.table_exists?.should be_true  }
+  it { User.respond_to?('name').should be_true }
   #describe "sin atributos" do
   #  blank_user = User.new
   #  it { blank_user.should be_invalid }

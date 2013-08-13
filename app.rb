@@ -9,4 +9,3 @@ require_relative 'models/init'
 require_relative 'routes/init'      
 
 class MicroBlogging < Sinatra::Base ; end
-

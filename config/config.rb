@@ -3,11 +3,11 @@ require 'sequel'
 
 class MicroBlogging < Sinatra::Base
   configure :development do
-    set :db, File.join("sqlite3://development.db")
+    set :db, File.join("sqlite://development.db")
   end
 
   configure :test do
-    set :db, File.join("sqlite3://test.db")
+    set :db, File.join("sqlite://test.db")
   end
 
   enable :sessions

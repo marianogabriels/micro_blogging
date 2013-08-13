@@ -1,12 +1,10 @@
 require 'rspec'
 require 'rack/test'
-ENV['RACK_ENV'] = 'test'
-
+require 'sinatra'
 Bundler.setup(:default, :test)
-require_relative '../app'
 
 class MicroBlogging < Sinatra::Base
-  #set :environment, :test
+  set :environment, :test
   set :run, false
   set :raise_errors, true
 end
@@ -18,3 +16,6 @@ RSpec.configure do |config|
   #end
 end
 
+require_relative '../app'
+require_relative '../config/config'
+Sequel::Model.db = MicroBlogging.db

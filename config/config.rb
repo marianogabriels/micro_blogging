@@ -3,16 +3,14 @@ require 'sequel'
 
 class MicroBlogging < Sinatra::Base
   configure :development do
-    set :database, 'sqlite://tmp/development.sqlite'
+    set :db, File.join("sqlite3://development.db")
   end
 
   configure :test do
-    set :database, 'sqlite://tmp/test.sqlite' 
-  end
-  
-  configure :production do
-    #pg
+    set :db, File.join("sqlite3://test.db")
   end
 
   enable :sessions
+
+  Sequel::Model.db = db
 end

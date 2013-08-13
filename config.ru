@@ -1,4 +1,3 @@
 require "./app"
-require_relative "config/environments/development"
-raise ENV[RACK_ENV]
+require_relative "config/config"
 run MicroBlogging

@@ -1,4 +1,4 @@
-MicroBloggin
+MicroBlogging
 ----------------------------------
 
 install

@@ -1,4 +1,4 @@
-class MicroBloggin < Sinatra::Application
+class MicroBlogging < Sinatra::Base
   get '/' do
     'juejue'
   end

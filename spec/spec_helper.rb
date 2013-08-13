@@ -1,8 +1,9 @@
 require 'rspec'
 require 'rack/test'
-require_relative '../app'
+require 'sinatra'
+Bundler.setup(:default, :test)
 
-class MicroBloggin < Sinatra::Application
+class MicroBlogging < Sinatra::Base
   set :environment, :test
   set :run, false
   set :raise_errors, true
@@ -10,8 +11,11 @@ end
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-  config.around(:each) do |example|
-    DB.transaction(:rollback=>:always){example.run}
-  end
+  #config.around(:each) do |example|
+  #  db.transaction(:rollback=>:always){example.run}
+  #end
 end
 
+require_relative '../app'
+require_relative '../config/config'
+Sequel::Model.db = MicroBlogging.db

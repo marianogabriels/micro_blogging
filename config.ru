@@ -1,2 +1,3 @@
 require "./app"
-run MicroBloggin
+require_relative "config/config"
+run MicroBlogging

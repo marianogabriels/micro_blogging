@@ -1,5 +1,5 @@
 require_relative '../spec_helper'
 
-describe Tweet do
+describe Post do
   it { true.should be_true }
 end

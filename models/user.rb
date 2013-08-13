@@ -4,7 +4,7 @@ class User < Sequel::Model
   def validate
     super
     validates_unique :username
-    validates_unique :email
+   validates_unique :email
     validates_presence [:username, :email]
   end
 end

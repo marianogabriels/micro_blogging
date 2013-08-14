@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'sequel'
 gem 'haml'
 gem 'rake'
+gem 'sinatra-authentication'
 
 group :development do
   gem 'guard'

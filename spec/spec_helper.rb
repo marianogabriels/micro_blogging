@@ -10,6 +10,7 @@ class MicroBlogging < Sinatra::Base
 end
 
 RSpec.configure do |config|
+  config.color_enabled = true
   config.include Rack::Test::Methods
   config.around(:each) do |example|
     MicroBlogging.db.transaction(:rollback=>:always){example.run}

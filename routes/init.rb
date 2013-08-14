@@ -1,2 +1,3 @@
-require_relative 'posts'
-require_relative 'static'
+require_relative 'posts_routes'
+require_relative 'static_routes'
+require_relative 'authentication_routes'

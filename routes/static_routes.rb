@@ -1,5 +1,5 @@
 class MicroBlogging < Sinatra::Base
   get '/' do
-    "000"
+    haml :login
   end
 end

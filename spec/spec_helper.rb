@@ -20,3 +20,10 @@ end
 require_relative '../app'
 require_relative '../config/config'
 Sequel::Model.db = MicroBlogging.db
+
+
+def create_user
+  user = User.new
+
+
+end

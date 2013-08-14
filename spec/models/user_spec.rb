@@ -15,10 +15,17 @@ describe User do
     it { blank_user.should_not be_valid }
 
     describe "with same username" do
-      invalid_user = User.new(username: 'valid', email: 'foobar@example.com')
-      it { invalid_user.should_not be_valid } 
+      @user = User.new(username: 'valid', email: 'foobar@example.com')
+      it { should_not be_valid } 
     end
 
+    describe "without email" do
+      @user = User.new(username: 'valid')
+      it { should_not be_valid }
+      @user.email = ''
+      it { should_not be_valid }
+    end
+    
   end
 
   #

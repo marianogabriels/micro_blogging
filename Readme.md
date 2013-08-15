@@ -16,5 +16,3 @@ Tests
 
     rake db:reset:test
     rspec spec/
-
-

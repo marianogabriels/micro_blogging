@@ -8,7 +8,9 @@ class MicroBlogging < Sinatra::Base; end
 
 
 require_relative 'config/config'
-require_relative 'helpers/init'
+
+Dir.glob('*/*init*').each do |i|
+  require_relative i
+end
+
 #require_relative 'db/config'
-require_relative 'models/init'
-require_relative 'routes/init'      

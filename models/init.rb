@@ -1,2 +1,2 @@
-require_relative 'user'
-require_relative 'post'
+require_relative 'post_model'
+require_relative 'user_model'

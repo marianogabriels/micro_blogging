@@ -1,5 +1,6 @@
 class MicroBlogging < Sinatra::Base
   get '/' do
-    haml :login
+    session[:message] ||= "Hello world!"
+    session[:message]
   end
 end

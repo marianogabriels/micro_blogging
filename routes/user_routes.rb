@@ -3,6 +3,10 @@ class MicroBlogging < Sinatra::Base
     #users.all
   end
 
+  post '/users' do
+    #create user
+  end
+
   get '/users/:id' do |id|
     #find
   end
@@ -11,9 +15,6 @@ class MicroBlogging < Sinatra::Base
     #signup form
   end
 
-  post '/users' do
-    #create user
-  end
 
   get 'users/1/edit' do
     #edit user forms

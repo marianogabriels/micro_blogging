@@ -31,8 +31,6 @@ GEM
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
-    haml (4.0.3)
-      tilt
     listen (1.2.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -98,7 +96,6 @@ DEPENDENCIES
   debugger
   guard
   guard-rspec
-  haml
   pg
   pry
   rack

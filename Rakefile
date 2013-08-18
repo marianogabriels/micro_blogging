@@ -7,6 +7,7 @@ namespace :db do
   namespace :reset do
     desc "reset development database"
     task :dev do
+      system("rm -r development.db")
       DB = Sequel.connect('sqlite://development.db', target: 0)
       Sequel::Migrator.run(DB, "db/migrate")
       puts "generada development.db"
@@ -14,6 +15,7 @@ namespace :db do
 
     desc "reset test schema"
     task :test do
+      system("rm -r test.db")
       DB = Sequel.connect('sqlite://test.db', target: 0 )
       Sequel::Migrator.run(DB, "db/migrate")
       puts "generada test.db"

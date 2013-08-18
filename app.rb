@@ -14,5 +14,3 @@ end
 Dir.glob('*/*init*').each do |i|
   require_relative i
 end
-
-#require_relative 'db/config'

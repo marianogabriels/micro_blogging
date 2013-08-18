@@ -4,7 +4,6 @@ class MicroBlogging < Sinatra::Base
   end
 
   post '/users' do
-    #create user
   end
 
   get '/users/:id' do |id|

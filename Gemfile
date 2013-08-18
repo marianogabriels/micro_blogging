@@ -4,7 +4,7 @@ gem 'bcrypt-ruby'
 gem 'rack'
 gem 'sinatra'
 gem 'sequel'
-#gem 'haml'
+gem 'haml'
 gem 'rake'
 gem 'sinatra-authentication'
 

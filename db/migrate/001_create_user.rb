@@ -7,4 +7,8 @@ Sequel.migration do
       String :password_digest, null: false
     end
   end
+
+  down do
+    drop_table(:users)
+  end
 end

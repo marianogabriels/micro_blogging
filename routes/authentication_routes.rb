@@ -1,13 +1,16 @@
-class MicroBloggin < Sinatra::Base
+class MicroBlogging < Sinatra::Base
   get '/signin' do
-    #
   end
 
   post '/sessions' do
   end
 
   delete '/signout' do
-    session[:username] = nil
+  end
+
+  post '/login' do
+    #if userTables.has_key?(params[:username])
+    #  user = v
   end
 
 end

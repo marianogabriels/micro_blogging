@@ -2,7 +2,7 @@ class MicroBlogging < Sinatra::Base
   helpers do
 
     def require_logged_in
-      redirect('/sessions/new') unles is_authenticated?
+      redirect('/sessions/new') unless is_authenticated?
     end
 
     def login

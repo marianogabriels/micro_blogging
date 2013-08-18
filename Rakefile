@@ -1,4 +1,10 @@
 require_relative 'db/config'
+
+desc "open a debugging console"
+task :console do
+  system("ruby console.rb")
+end
+
 namespace :db do
 
   require "sequel"

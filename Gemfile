@@ -14,6 +14,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_girl'
   gem 'sqlite3'
   gem 'debugger'
   gem 'pry'

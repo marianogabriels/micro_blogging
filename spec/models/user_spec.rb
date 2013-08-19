@@ -2,19 +2,27 @@ require_relative '../spec_helper'
 
 describe User do
   before do
-    @valid_user = User.new(username: 'valid', 
-                                  email: 'valid@example.com', 
-                                  password: 'FooFooFoo', 
-                                  password_confirmation: 'FooFooFoo')
+    @valid_user = User.new(username:              'valid', 
+                           email:                 'valid@example.com', 
+                           password:              'FooFooFoo', 
+                           password_confirmation: 'FooFooFoo')
     @valid_user.save
   end
 
+
   let(:blank_user) { User.new }
-    it { blank_user.respond_to?(:username).should be_true }
-    it { blank_user.respond_to?(:email).should be_true }
-    it { blank_user.respond_to?(:password_digest).should be_true }
-    it { blank_user.respond_to?(:password_confirmation).should be_true }
-    it { blank_user.respond_to?(:password).should be_true }
+  let(:valid_user) do
+    User.new(username:              'valid', 
+             email:                 'valid@example.com', 
+             password:              'FooFooFoo', 
+             password_confirmation: 'FooFooFoo')
+  end
+
+  it { blank_user.respond_to?(:username).should be_true }
+  it { blank_user.respond_to?(:email).should be_true }
+  it { blank_user.respond_to?(:password_digest).should be_true }
+  it { blank_user.respond_to?(:password_confirmation).should be_true }
+  it { blank_user.respond_to?(:password).should be_true }
 
   describe "validations" do
     it { blank_user.should_not be_valid }
@@ -23,7 +31,7 @@ describe User do
       @user = User.new(username: 'otro', 
                        email: 'foobar@example.com', 
                        password: 'FooFooFoo', 
-                      password_confirmation: 'FooFooFoo')
+                       password_confirmation: 'FooFooFoo')
       it { should_not be_valid } 
     end
 
@@ -39,8 +47,9 @@ describe User do
   describe "with same email" do
     let(:same_email) { User.new(username: 'another', 
                                 email: 'valid@example.com', 
-                                password: 'FooFoo', 
+                                password: 'FooFooFoo', 
                                 password_confirmation: 'FooFooFoo') }
     it { should_not be_valid } 
+    it { same_email.errors.to_s.match(/taken/).should be_true }
   end
 end

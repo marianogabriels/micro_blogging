@@ -1,6 +1,9 @@
 require 'rspec'
 require 'rack/test'
 require 'sinatra'
+require 'pry'
+require 'factory_girl'
+
 Bundler.setup(:default, :test)
 
 class MicroBlogging < Sinatra::Base
@@ -21,9 +24,6 @@ require_relative '../app'
 require_relative '../config/config'
 Sequel::Model.db = MicroBlogging.db
 
+FactoryGirl.find_definitions
 
-def create_user
-  user = User.new
-
-
-end
+binding.pry

@@ -5,4 +5,5 @@ class MicroBlogging < Sinatra::Base
     haml :'index', layout: :'layout/application'
   end
 
+
 end

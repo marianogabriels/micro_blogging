@@ -4,6 +4,13 @@ class MicroBlogging < Sinatra::Base
   end
 
   post '/users' do
+    @user = User.new(params[:user])
+    
+    if @user.save
+      redirect to('/')
+    else
+      @user.errors.full_messages
+    end
   end
 
   get '/users/:id' do |id|

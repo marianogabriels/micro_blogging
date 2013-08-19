@@ -31,4 +31,3 @@ end
 
 FactoryGirl.find_definitions
 
-binding.pry

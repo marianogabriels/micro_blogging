@@ -24,6 +24,11 @@ require_relative '../app'
 require_relative '../config/config'
 Sequel::Model.db = MicroBlogging.db
 
+#monkey path!!
+class Sequel::Model
+  alias_method :save!, :save
+end
+
 FactoryGirl.find_definitions
 
 binding.pry
